@@ -6,7 +6,7 @@ A comprehensive web-based hotel reservation system for managing room bookings, c
 
 ## Tech Stack
 
-- **Frontend**: React.js with TypeScript
+- **Frontend**: HTML, CSS
 - **Backend**: Node.js with Express
 - **Database**: MongoDB
 - **Authentication**: JWT (JSON Web Tokens)
