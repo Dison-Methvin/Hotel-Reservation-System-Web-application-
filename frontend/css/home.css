@@ -1,0 +1,994 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+.hero-section {
+  background-image: url('../Images/Events/pexels-mastercowley-1128783.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+  padding-left: 100px; /* Adjust as needed */
+  position: relative;
+}
+
+.hero-content {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.welcome-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
+    max-width: 600px;
+}
+
+.hotel-name {
+  font-family: 'Abhaya Libre ExtraBold', serif;
+  font-size: 5em;
+  margin: 0;
+  line-height: 1;
+}
+
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5em;
+  max-width: 600px;
+}
+
+.booking-form {
+    background: white;
+    padding: 30px; /* Reverted padding to 30px from sample */
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 20px; /* Reverted gap to 20px from sample */
+    align-items: end; /* Reverted align-items to end from sample */
+    position: absolute;
+    bottom: 20px; /* Set to 0px to align with the bottom of hero section */
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px; /* Reverted gap to 8px from sample */
+}
+
+.form-field label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; /* Reverted font size to 12px from sample */
+  color: #666; /* Reverted color to #666 from sample */
+  font-weight: 600;
+}
+
+.form-field input, .form-field select {
+  font-family: 'Inter', sans-serif;
+  padding: 12px; /* Reverted padding to 12px from sample */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px; /* Reverted font size to 14px from sample */
+  min-width: 150px; /* Reverted min-width to 150px from sample */
+}
+
+.book-now-btn {
+  background: #03241F;
+  color: white;
+  border: none;
+  padding: 12px 24px; /* Reverted padding to 12px 24px from sample */
+  border-radius: 4px;
+  font-size: 14px; /* Reverted font size to 14px from sample */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.book-now-btn:hover {
+  background: #1e3a21;
+}
+
+/* Stats Section */
+.stats {
+  background: #03241F; /* Changed to user's green color */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 20px auto; /* Added margin to create space */
+  padding: 10px 20px; /* Adjusted vertical padding to make it even smaller */
+}
+
+.stats-content h3 {
+  font-family: 'Inter', sans-serif; /* Added font */
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stats-content p {
+  font-family: 'Inter', sans-serif; /* Added font */
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.stats-numbers {
+  display: flex;
+  gap: 60px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  font-family: 'Inter', sans-serif; /* Added font */
+  font-size: 36px;
+  font-weight: 700;
+  color: #d4af37; /* Gold-like color */
+}
+
+.stat-label {
+  font-family: 'Inter', sans-serif; /* Added font */
+  font-size: 12px;
+  margin-top: 5px;
+  opacity: 0.9;
+}
+
+/* Celebratory Text Section */
+.celebratory-text-section {
+  margin: 0 auto; /* Remove top/bottom margin since we're using global spacing */
+  max-width: 1200px;
+  text-align: center;
+  color: #03241F; /* Header green color */
+}
+
+.celebratory-main-text {
+  font-family: 'Ephesis', cursive;
+  font-size: 5.5em; /* Adjusted font size */
+  font-weight: normal;
+  margin-bottom: 20px; /* Adjusted margin */
+  margin-top: 20px; /* Reduced margin */
+  line-height: 0.8;
+}
+
+.celebratory-main-text span {
+  font-size: 0.6em; /* Reduced font size for 'in Style' */
+  display: block;
+  margin-top: 5px; /* Adjusted vertical spacing */
+}
+
+.celebratory-description {
+  font-family: 'Aboreto', cursive;
+  font-size: 0.9em; /* Adjusted font size */
+  white-space: nowrap; /* Force text to stay on a single line */
+  margin: 0px auto 20px auto; /* Adjusted margin */
+  line-height: 0.8;
+}
+
+.celebratory-sub-text {
+  font-family: 'Ephesis', cursive;
+  font-size: 5.5em; /* Adjusted font size */
+  font-weight: normal;
+  line-height:0.8;
+  margin-top: 20px; /* Reduced top margin to remove space above it */
+  margin-bottom: 40px; /* Reduced bottom margin to remove space below it */
+}
+
+
+/* Events Gallery Section */
+.events-gallery-section {
+  margin: 0 auto; /* Remove top/bottom margin since we're using global spacing */
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px; /* Fixed height for consistent ratio, adjust as needed */
+  object-fit: cover;
+  display: block;
+}
+
+.item-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(3, 36, 31, 0.8); /* Header green with transparency */
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2em;
+  padding: 15px 10px;
+  text-align: center;
+  
+}
+
+/* Testimonials Header Section */
+.testimonials-header-section {
+  margin: 0 auto; /* Remove top/bottom margin since we're using global spacing */
+  max-width: 1200px;
+  text-align: center;
+  color: #03241F; /* Header green color */
+  margin-top: 20px; /* Reduced top margin to remove space above it */
+  margin-bottom: 40px; /* Reduced bottom margin to remove space below it */
+}
+
+.testimonials-main-text {
+  font-family: 'Ephesis', cursive !important;
+  font-size: 3.5em;
+  font-weight: normal;
+  margin-bottom: 10px;
+  line-height: 1.1;
+  color: #03241F;
+}
+
+.testimonials-description {
+  font-family: 'Aboreto', cursive;
+  font-size: 0.9em;
+  max-width: 800px; /* Allow natural wrapping */
+  margin: 0px auto;
+  line-height: 1.4;
+  margin-top: 20px; /* Reduced top margin to remove space above it */
+  margin-bottom: 20px; /* Reduced bottom margin to remove space below it */
+}
+
+/* Testimonials Section Styles */
+.testimonials-header-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.testimonials-main-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  color: #03241F;
+}
+
+.testimonials-description {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #03241F;
+  letter-spacing: 1px;
+  margin-top: -10px;
+}
+
+.testimonials-content-container {
+  background: none;
+  padding: 0;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials-box {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #03241F;
+  border-radius: 18px;
+  padding: 32px 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 0;
+}
+
+.testimonial-card {
+  background-color: #d4af37;
+  padding: 16px;
+  border-radius: 8px;
+  min-height: 180px;
+  max-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 2px solid #03241F;
+}
+
+.guest-name {
+  font-weight: bold;
+  color: #03241F;
+}
+
+.testimonial-text {
+  font-size: 0.9em;
+  color: #03241F;
+  margin: 6px 0;
+  line-height: 1.3;
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.testimonial-date {
+  font-size: 0.8em;
+  text-align: right;
+  color: #03241F;
+  opacity: 0.7;
+}
+
+.star-rating-container {
+  background-color: white;
+  padding: 8px 8px; /* Reduced padding for tighter fit */
+  border-radius: 8px;
+  width: 100%;
+  max-width: 420px; /* Slightly reduced max-width for compactness */
+  margin: 8px auto 8px auto; /* Less vertical margin, centered */
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  min-height: unset; /* Remove any min-height if present */
+}
+
+.star-rating-title {
+  font-size: 1.9em; /* Slightly smaller for compactness */
+  font-family: 'Ephesis', cursive;
+  font-weight: normal;
+  margin-bottom: 4px; /* Less space below title */
+  color: #03241F;
+  margin-right: 0;
+  align-self: center;
+}
+
+.star-rating-breakdown {
+  display: flex;
+  flex-direction: row;
+  gap: 10px; /* Less gap between rating columns */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.rating-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 40px;
+  font-family: 'Aboreto', cursive;
+  color: #03241F;
+  font-size: 0.92em;
+}
+
+.stars {
+  font-size: 1em;
+  color: #d4af37;
+  font-family: 'Ephesis', cursive;
+}
+
+.rating-count {
+  font-weight: bold;
+  color: #03241F;
+  font-family: 'Aboreto', cursive;
+  font-size: 0.92em;
+}
+
+@media (max-width: 1200px) {
+  .testimonials-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 30px 10px;
+  }
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .star-rating-container {
+    width: 100%;
+    margin: 20px auto 0 auto;
+  }
+}
+@media (max-width: 900px) {
+  .star-rating-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px 8px;
+    max-width: 100%;
+  }
+  .star-rating-breakdown {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .star-rating-title {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 700px) {
+  .testimonials-content-container {
+    padding: 20px 0;
+  }
+  .testimonials-box {
+    padding: 16px 2px;
+    gap: 16px;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .star-rating-container {
+    width: 100%;
+    margin: 20px auto 0 auto;
+  }
+}
+
+/* Why Choose Us Section */
+.why-choose-us-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px; /* Adjust gap between images and content */
+  padding: 40px 20px; /* Adjusted padding */
+  background-color: #fff; /* White background */
+  max-width: 1200px; /* Align with other sections */
+  margin: 0 auto; /* Remove top/bottom margin since we're using global spacing */
+}
+
+.why-choose-us-images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%; /* Adjust as needed */
+  min-width: 400px; /* Minimum width for images container */
+  height: 500px; /* Fixed height for image container */
+}
+
+.why-choose-us-images img {
+  position: absolute;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image-family {
+  width: 250px; 
+  height: 250px; 
+  border-radius: 30px; /* More rounded square */
+  top: 0;
+  left: 0;
+  transform: translate(-20%, -20%); /* Adjusted position */
+  z-index: 2;
+}
+
+.image-hotel-interior {
+  width: 450px; 
+  height: 450px; 
+  border-radius: 225px 225px 0 0; /* Adjusted for perfect arch with 450px width */
+  bottom: 0;
+  right: 0;
+  transform: translate(10%, 10%); /* Adjusted position */
+  z-index: 1;
+}
+
+.why-choose-us-content {
+  width: 50%; /* Adjust as needed */
+  max-width: 500px;
+  text-align: left;
+}
+
+.why-choose-us-title {
+  font-family: 'Ephesis', cursive; /* Reusing Ephesis as it's already imported and similar */
+  font-size: 3.5em;
+  font-weight: normal;
+  color: #03241F;
+  margin-bottom: 15px;
+}
+
+.why-choose-us-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.why-choose-us-features {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.feature-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feature-item {
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  color: #03241F;
+  display: flex;
+  align-items: center;
+}
+
+.checkmark {
+  color: #D4AF37; /* Gold color for checkmark */
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.learn-more-btn {
+  background-color: #FFD700;
+  color: #03241F;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content within button */
+  width: 100%; /* Make button full width of content area */
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #e0b800; /* Slightly darker gold on hover */
+}
+
+.learn-more-btn .arrow {
+  font-size: 1.2em;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .why-choose-us-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .why-choose-us-images {
+    width: 100%;
+    height: 400px;
+    min-width: unset;
+  }
+  .why-choose-us-content {
+    width: 100%;
+    max-width: 600px;
+  }
+  .why-choose-us-features {
+    justify-content: center;
+  }
+  .image-family {
+    transform: translate(-10%, -10%);
+  }
+  .image-hotel-interior {
+    transform: translate(10%, 10%);
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-us-section {
+    padding: 60px 15px;
+  }
+  .why-choose-us-images {
+    height: 300px;
+  }
+  .image-family {
+    width: 200px;
+    height: 200px;
+    transform: translate(-5%, -5%);
+  }
+  .image-hotel-interior {
+    width: 350px;
+    height: 350px;
+    transform: translate(5%, 5%);
+  }
+  .why-choose-us-title {
+    font-size: 2.8em;
+  }
+  .why-choose-us-features {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose-us-section {
+    padding: 40px 10px;
+  }
+  .why-choose-us-images {
+    height: 250px;
+  }
+  .image-family {
+    width: 150px;
+    height: 150px;
+    transform: translate(0, 0);
+  }
+  .image-hotel-interior {
+    width: 250px;
+    height: 250px;
+    transform: translate(0, 0);
+  }
+  .why-choose-us-title {
+    font-size: 2.2em;
+  }
+  .why-choose-us-features {
+    align-items: center; /* Center features on small screens */
+  }
+  
+}
+
+.built-for-everyone-section {
+  max-width: 1200px;
+  margin: 0 auto; /* Remove top/bottom margin since we're using global spacing */
+  padding: 0 20px;
+  margin-top: 0; /* Remove top margin to move closer to Why Choose Us */
+  margin-bottom: 20px; /* Reduced margin-bottom to bring it closer to the image */
+}
+
+.built-for-everyone-title {
+  font-family: 'Ephesis', cursive;
+  font-size: 4em;
+  color: #03241F;
+  margin-bottom: 40px; /* Reduced margin-bottom */
+  font-weight: normal;
+  text-align: center;
+  margin-left: 20px; /* Add left margin to move it to the left */
+}
+
+.roles-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to start for consistency */
+  gap: 20px; /* Reduced gap between cards */
+  flex-wrap: wrap;
+  max-width: 1200px; /* Ensure it respects max-width */
+  margin: 0 auto; /* Center the container */
+}
+
+.role-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 30px 15px; /* Reduced padding */
+  width: 240px; /* Reduced width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-5px); /* Slightly less pronounced hover effect */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.role-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #e6f7ed;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px; /* Reduced margin-bottom */
+}
+
+.role-icon svg {
+  width: 45px;
+  height: 45px;
+  color: #03241F;
+}
+
+.role-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.3em; /* Slightly reduced font size */
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px; /* Reduced margin-bottom */
+  text-align: center;
+}
+
+.role-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85em; /* Slightly reduced font size */
+  color: #666;
+  line-height: 1.5; /* Adjusted line height */
+}
+
+/* Global section spacing */
+.hero-section,
+.stats,
+.celebratory-text-section,
+.events-gallery-section,
+.testimonials-header-section,
+.testimonials-content-container,
+.why-choose-us-section,
+.built-for-everyone-section {
+  margin-bottom: 40px;
+}
+
+/* Specific section adjustments */
+.stats {
+  margin-top: 20px;
+}
+
+.why-choose-us-section {
+  margin-bottom: 16px; /* Reduced space between Why Choose Us and Built For Everyone */
+}
+
+.built-for-everyone-section {
+  margin-top: 0; /* Remove top margin to move closer to Why Choose Us */
+}
+
+/* Remove double spacing for sections that follow each other directly */
+.stats {
+  margin-top: 0;
+}
+.celebratory-text-section {
+  margin-top: 0;
+}
+.events-gallery-section {
+  margin-top: 0;
+}
+.testimonials-header-section {
+  margin-top: 0;
+}
+.testimonials-content-container {
+  margin-top: 0;
+}
+.why-choose-us-section {
+  margin-top: 0;
+}
+.built-for-everyone-section {
+  margin-top: 0;
+}
+
+/* Remove any previous margin-bottom or margin-top overrides for these sections if present */
+
+/* Large Image Section */
+.large-image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px; /* Added horizontal padding to create space from margins */
+  margin-bottom: 40px;
+}
+
+.large-decorative-image {
+  width: 100%;
+  max-width: 1160px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  /* Removed border-radius and box-shadow to make it look typed in */
+}
+
+/* Footer Section */
+.main-footer {
+  background-color: #03241F; /* Dark green background */
+  color: #fff; /* White text color */
+  padding: 20px 40px 20px 40px; /* Top, right, bottom, left padding */
+  font-family: 'Inter', sans-serif;
+  margin-top: 20px; /* Space above the footer */
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.footer-logo img {
+  max-width: 250px;
+  height: auto;
+  margin-right: 40px;
+  margin-top: 60px; /* Increased margin-top to move the logo further down for centering */
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Gap between columns */
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.footer-column {
+  flex: 1; /* Allow columns to grow */
+  min-width: 150px; /* Minimum width for columns before wrapping */
+}
+
+.footer-column h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #ccc; /* Lighter white for links */
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Light divider line */
+  margin: 20px 0;
+}
+
+.footer-copyright-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.footer-copyright {
+  font-size: 0.85em;
+  color: #ccc;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments for Footer */
+@media (max-width: 1024px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  .footer-links {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footer-column {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-footer {
+    padding: 40px 20px 15px 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    min-width: unset;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 10px;
+  }
+
+  .footer-copyright-social {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-copyright {
+    margin-bottom: 10px;
+  }
+
+  .footer-divider {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-footer {
+    padding: 30px 15px 10px 15px;
+  }
+
+  .footer-logo img {
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+
+  .footer-column h3 {
+    font-size: 1em;
+  }
+
+  .footer-column ul li a {
+    font-size: 0.8em;
+  }
+
+  .social-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+

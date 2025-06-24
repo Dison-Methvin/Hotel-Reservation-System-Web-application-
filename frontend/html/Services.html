@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celestia Day - Services</title>
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/Services.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@400;700&family=Abhaya+Libre+ExtraBold&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .user-info {
+        display: none;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 15px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+      }
+      .user-info img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+      .user-info .user-details {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9em;
+      }
+      .user-info .username {
+        font-weight: 600;
+        color: #fff;
+      }
+      .user-info .datetime {
+        font-size: 0.8em;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .auth-buttons {
+        display: flex;
+        gap: 10px;
+      }
+      .logout-btn {
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .logout-btn:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    </style>
+    <script src="../js/room-redirect.js" defer></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="left-nav">
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="Services.html">SERVICES</a></li>
+          <li><a href="reservations.html">RESERVATIONS</a></li>
+          <li><a href="YourBookings.html">MY BOOKINGS</a></li>
+        </ul>
+      </nav>
+      <div class="logo-container">
+        <img src="../Images/Logo.png" alt="Celestia Day Logo" class="logo" />
+      </div>
+      <nav class="right-nav">
+        <ul>
+          <li><a href="AboutUs.html">ABOUT US</a></li>
+          <li><a href="ContactUs.html">CONTACT US</a></li>
+          <li><a href="Gallery.html">GALLERY</a></li>
+        </ul>
+      </nav>
+      <div class="header-buttons">
+        <!-- Auth buttons for logged out state -->
+        <div class="auth-buttons">
+          <button class="register-btn">Register</button>
+          <button class="signin-btn">Sign In</button>
+        </div>
+        <!-- User info for logged in state -->
+        <div class="user-info">
+          <img src="../Images/user-avatar.png" alt="User Avatar" />
+          <div class="user-details">
+            <span class="username"></span>
+            <span class="datetime"></span>
+          </div>
+          <button class="logout-btn">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-content">
+          <p class="welcome-text">WELCOME TO</p>
+          <h1 class="hotel-name">CELESTIA BAY</h1>
+          <p class="tagline">Book your stay and enjoy Luxury redefined at the most affordable <br /> rates.</p>
+        </div>
+        <div class="booking-form-container">        <form class="booking-form" id="bookingForm">
+          <div class="form-field">
+            <label for="checkInDate">Check In</label>
+            <input type="date" id="checkInDate" title="Check In Date" required>
+          </div>
+          <div class="form-field">
+            <label for="checkOutDate">Check Out</label>
+            <input type="date" id="checkOutDate" title="Check Out Date" required>
+          </div>
+          <div class="form-field">
+            <label for="roomSelection">Room Selection</label>
+            <select id="roomSelection" title="Room Selection" required>
+              <option value="">Select Room Type</option>
+              <option value="single">Single Room - Single Guest</option>
+              <option value="double">Double Room - 2 Guests and 1 Child</option>
+            </select>
+          </div>
+          <div class="form-field guest-details">
+            <label>Number of Guests</label>
+            <div class="guest-inputs">
+              <div class="guest-type">
+                <label for="adultCount">Adults</label>
+                <input type="number" id="adultCount" title="Number of Adults" min="1" max="4" value="1">
+              </div>
+              <div class="guest-type">
+                <label for="childCount">Children</label>
+                <input type="number" id="childCount" title="Number of Children" min="0" max="2" value="0">
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="book-now-btn">Book Now</button>
+        </form>
+      </div>
+    </main>
+
+    <section class="promo-ribbon">
+      <p>&#9670; EXCLUSIVE OFFER: ENJOY 20% OFF YOUR FIRST STAY — LIMITED TIME ONLY! BOOK NOW. &#9670; EXCLUSIVE OFFER: ENJOY 20% OFF YOUR FIRST STAY — LIMITED TIME ONLY! BOOK NOW. &#9670; EXCLUSIVE OFFER: ENJOY 20% OFF YOUR FIRST STAY — LIMITED TIME ONLY! BOOK NOW.</p>
+    </section>
+
+    <section class="services-header-section">
+      <!-- moved to left section below -->
+    </section>
+
+    <section class="service-50-section">
+      <div class="service-50-left">
+        <h1 class="services-header-title">Services</h1>
+        <p class="services-header-desc">
+          EXPERIENCE UNPARALLELED HOSPITALITY AT CELESTIA BAY HOTEL, WHERE EVERY DETAIL IS CRAFTED FOR YOUR COMFORT. ENJOY ELEGANTLY DESIGNED ROOMS, WORLD-CLASS DINING, A REJUVENATING SPA, AND BREATHTAKING OCEAN VIEWS. WHETHER FOR BUSINESS OR LEISURE, OUR DEDICATED TEAM ENSURES A MEMORABLE STAY WITH PERSONALIZED SERVICE AND EXCLUSIVE AMENITIES.
+        </p>
+        <div class="services-header-btn-row">
+          <a href="AboutUs.html" class="services-header-btn">About Us</a>
+        </div>
+        <h2 class="service-50-title">GOURMET DINING & BARS</h2>
+        <p class="service-50-desc">
+          SAVOR A CULINARY JOURNEY AT CELESTIA BAY'S EXCEPTIONAL RESTAURANTS AND BARS. OUR SIGNATURE AZURE RESTAURANT OFFERS FARM-TO-TABLE DELICACIES WITH A FOCUS ON FRESH SEAFOOD AND LOCALLY SOURCED INGREDIENTS. FOR AN INTIMATE EXPERIENCE, THE MOONLIGHT LOUNGE SERVES HANDCRAFTED COCKTAILS AND FINE WINES AGAINST A BACKDROP OF SUNSET VIEWS. GUESTS CAN ALSO ENJOY 24/7 IN-ROOM DINING, POOLSIDE SNACKS, AND THEMED BUFFET NIGHTS SHOWCASING GLOBAL CUISINES—ALL CURATED BY OUR AWARD-WINNING CHEFS.
+        </p>
+      </div>
+      <div class="service-50-right">
+        <div class="service-cards-container">
+          <div class="service-card">
+            <img src="../Images/Food and beverages/ed biffet (3).png" alt="Unwind in Elegance" class="service-card-img" />
+            <h3 class="service-card-title">UNWIND IN ELEGANCE</h3>
+            <p class="service-card-desc">DISCOVER REFINED COMFORT IN OUR LUXURIOUS ROOMS AND SUITES, DESIGNED WITH MODERN AESTHETICS AND PREMIUM AMENITIES FOR THE ULTIMATE RELAXATION.</p>
+          </div>
+          <div class="service-card">
+            <img src="../Images/Food and beverages/ed biffet.png" alt="Culinary Excellence" class="service-card-img" />
+            <h3 class="service-card-title">CULINARY EXCELLENCE</h3>
+            <p class="service-card-desc">INDULGE IN EXQUISITE DINING EXPERIENCES, FROM FRESH SEAFOOD BY THE OCEAN TO HANDCRAFTED COCKTAILS UNDER THE STARS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../js/api-service.js"></script>
+    <script src="../js/auth-manager.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/services.js"></script>
+    <script src="../js/navigation.js"></script>
+  </body>
+</html>

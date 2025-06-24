@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celestia Day - Gallery</title>
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/Gallery.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@400;700&family=Abhaya+Libre+ExtraBold&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .user-info {
+        display: none;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 15px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+      }
+      .user-info img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+      .user-info .user-details {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9em;
+      }
+      .user-info .username {
+        font-weight: 600;
+        color: #fff;
+      }
+      .user-info .datetime {
+        font-size: 0.8em;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .auth-buttons {
+        display: flex;
+        gap: 10px;
+      }
+      .logout-btn {
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .logout-btn:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    </style>
+    <script src="../js/room-redirect.js" defer></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="left-nav">
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="Services.html">SERVICES</a></li>
+          <li><a href="reservations.html">RESERVATIONS</a></li>
+          <li><a href="YourBookings.html">MY BOOKINGS</a></li>
+        </ul>
+      </nav>
+      <div class="logo-container">
+        <img src="../Images/Logo.png" alt="Celestia Day Logo" class="logo" />
+      </div>
+      <nav class="right-nav">
+        <ul>
+          <li><a href="AboutUs.html">ABOUT US</a></li>
+          <li><a href="ContactUs.html">CONTACT US</a></li>
+          <li><a href="Gallery.html">GALLERY</a></li>
+        </ul>
+      </nav>
+      <div class="header-buttons">
+        <!-- Auth buttons for logged out state -->
+        <div class="auth-buttons">
+          <button class="register-btn">Register</button>
+          <button class="signin-btn">Sign In</button>
+        </div>
+        <!-- User info for logged in state -->
+        <div class="user-info">
+          <img src="../Images/user-avatar.png" alt="User Avatar" />
+          <div class="user-details">
+            <span class="username"></span>
+            <span class="datetime"></span>
+          </div>
+          <button class="logout-btn">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-content">
+          <p class="welcome-text">WELCOME TO</p>
+          <h1 class="hotel-name">CELESTIA BAY</h1>
+          <p class="tagline">Book your stay and enjoy Luxury redefined at the most affordable <br /> rates.</p>
+        </div>
+        <div class="booking-form-container">
+        <form class="booking-form" id="bookingForm">
+          <div class="form-field">
+            <label for="checkInDate">Check In</label>
+            <input type="date" id="checkInDate" title="Check In Date" required>
+          </div>
+          <div class="form-field">
+            <label for="checkOutDate">Check Out</label>
+            <input type="date" id="checkOutDate" title="Check Out Date" required>
+          </div>
+          <div class="form-field">
+            <label for="roomSelection">Room Selection</label>
+            <select id="roomSelection" title="Room Selection" required>
+              <option value="">Select Room Type</option>
+              <option value="single">Single Room - Single Guest</option>
+              <option value="double">Double Room - 2 Guests and 1 Child</option>
+            </select>
+          </div>
+          <div class="form-field guest-details">
+            <span class="visually-hidden">Number of Guests</span>
+            <div class="guest-inputs">
+              <div class="guest-type">
+                <label for="adultCount">Adults</label>
+                <input type="number" id="adultCount" title="Number of Adults" min="1" max="4" value="1" />
+              </div>
+              <div class="guest-type">
+                <label for="childCount">Children</label>
+                <input type="number" id="childCount" title="Number of Children" min="0" max="2" value="0" />
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="book-now-btn">Book Now</button>
+        </form>
+      </div>
+    </main>
+
+    <section class="promo-ribbon">
+      <p>&#9670; EXCLUSIVE OFFER: ENJOY 20% OFF YOUR FIRST STAY — LIMITED TIME ONLY! BOOK NOW. &#9670; EXCLUSIVE OFFER: ENJOY 20% OFF YOUR FIRST STAY — LIMITED TIME ONLY! BOOK NOW. &#9670; EXCLUSIVE OFFER: ENJOY 20% OFF YOUR FIRST STAY — LIMITED TIME ONLY! BOOK NOW.</p>
+    </section>
+
+    <section class="gallery-intro">
+      <div class="gallery-title-row">
+        <span class="gallery-title">Gallery</span>
+      </div>
+      <div class="gallery-desc-single">
+        AT CELESTIA BAY, WE REDEFINE THE MEANING OF LUXURY HOSPITALITY. OUR HOTEL OFFERS A SEAMLESS BLEND OF CLASSIC SOPHISTICATION AND MODERN COMFORT, PROVIDING GUESTS WITH AN UNPARALLELED EXPERIENCE.
+      </div>
+    </section>
+
+    <section class="gallery-fullwidth-row">
+      <img src="../Images/Food and beverages/Untitled design (28).png" class="gallery-fullwidth-img" alt="Comfy Area" />
+      <img src="../Images/Food and beverages/Untitled design (19).png" class="gallery-fullwidth-img" alt="Buffet" />
+      <img src="../Images/Food and beverages/ed biffet (7).png" class="gallery-fullwidth-img" alt="Gourmet Dish" />
+    </section>
+
+    <section class="gallery-cards-section">
+      <div class="gallery-card">
+        <img src="../Images/Food and beverages/ed biffet (2).png" class="gallery-card-img" alt="Food" />
+        <p class="gallery-card-caption">Gourmet Delights</p>
+      </div>
+      <div class="gallery-card">
+        <img src="../Images/Food and beverages/ed biffet (3).png" class="gallery-card-img" alt="Food" />
+        <p class="gallery-card-caption">Culinary Artistry</p>
+      </div>
+      <div class="gallery-card">
+        <img src="../Images/Food and beverages/Untitled design (25).png" class="gallery-card-img" alt="Food" />
+        <p class="gallery-card-caption">Epicurean Dreams</p>
+      </div>
+    </section>
+
+    <section class="gallery-cards-section">
+      <div class="gallery-card">
+        <img src="../Images/Hotel and outdoors/Untitled design (24).png" class="gallery-card-img" alt="Exterior" />
+        <p class="gallery-card-caption">Majestic Facade</p>
+      </div>
+      <div class="gallery-card">
+        <img src="../Images/Hotel and outdoors/Untitled design (28).png" class="gallery-card-img" alt="Exterior" />
+        <p class="gallery-card-caption">Architectural Wonder</p>
+      </div>
+      <div class="gallery-card">
+        <img src="../Images/Hotel and outdoors/Untitled design (29).png" class="gallery-card-img" alt="Exterior" />
+        <p class="gallery-card-caption">Grand Entrance</p>
+      </div>
+    </section>
+
+    <section class="gallery-cards-section">
+      <div class="gallery-card">
+        <img src="../Images/Interior/Reception and halls/Untitled design (25).png" class="gallery-card-img" alt="Interior" />
+        <p class="gallery-card-caption">Elegant Spaces</p>
+      </div>
+      <div class="gallery-card">
+        <img src="../Images/Interior/Reception and halls/Untitled design (34).png" class="gallery-card-img" alt="Interior" />
+        <p class="gallery-card-caption">Luxury Defined</p>
+      </div>
+      <div class="gallery-card">
+        <img src="../Images/Interior/Reception and halls/rod-long-2P_ifaetDm0-unsplash.jpg" class="gallery-card-img" alt="Interior" />
+        <p class="gallery-card-caption">Timeless Beauty</p>
+      </div>
+    </section>
+
+    <section class="gallery-cards-section">
+      <div class="gallery-card">
+        <img src="../Images/Interior/Reception and halls/Untitled design (27).png" class="gallery-card-img" alt="Halls" />
+        <p class="gallery-card-caption">Grand Corridors</p>
+      </div>
+      <div class="gallery-card">
+        <img src="../Images/Interior/Reception and halls/Untitled design (36).png" class="gallery-card-img" alt="Halls" />
+        <p class="gallery-card-caption">Stately Passage</p>
+      </div>
+      <div class="gallery-card">
+        <img src="../Images/Interior/Reception and halls/Untitled design (19).png" class="gallery-card-img" alt="Halls" />
+        <p class="gallery-card-caption">Noble Hallways</p>
+      </div>
+    </section>
+
+    <section class="gallery-cards-section">
+      <div class="gallery-card">
+        <img src="../Images/Interior/Rooms/Untitled design (19).png" class="gallery-card-img" alt="Rooms" />
+        <p class="gallery-card-caption">Royal Suite</p>
+      </div>
+      <div class="gallery-card">
+        <img src="../Images/Interior/Rooms/bed-8390092_1280.jpg" class="gallery-card-img" alt="Rooms" />
+        <p class="gallery-card-caption">Luxury Chamber</p>
+      </div>
+      <div class="gallery-card">
+        <img src="../Images/Interior/Rooms/window-3178666_1280.jpg" class="gallery-card-img" alt="Rooms" />
+        <p class="gallery-card-caption">Dream Retreat</p>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <div class="testimonial testimonial-left">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="The Thompson Family" class="testimonial-avatar" />
+        <div class="testimonial-info">
+          <div class="testimonial-name">The Thompson Family</div>
+          <div class="testimonial-role">Repeat Guests</div>
+        </div>
+        <div class="testimonial-quote-mark">&ldquo;&ldquo;</div>
+        <div class="testimonial-text">
+          "From the moment we arrived, we were enveloped in luxury and tranquility. Celestia Bay Hotel exceeded all expectations – a truly unforgettable escape."
+        </div>
+      </div>
+      <div class="testimonial testimonial-right">
+        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Mark & Lisa Johnson" class="testimonial-avatar" />
+        <div class="testimonial-info">
+          <div class="testimonial-name">Mark & Lisa Johnson</div>
+          <div class="testimonial-role">Newly Weds</div>
+        </div>
+        <div class="testimonial-quote-mark">&ldquo;&ldquo;</div>
+        <div class="testimonial-text">
+          "We came to Celestia Bay Hotel for a relaxing getaway, and we got so much more. The attention to detail, the exquisite dining, and the warm hospitality made our stay exceptional."
+        </div>
+      </div>
+      <div class="testimonial testimonial-bottom">
+        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Dr. Anya Sharma" class="testimonial-avatar" />
+        <div class="testimonial-info">
+          <div class="testimonial-name">Dr. Anya Sharma</div>
+          <div class="testimonial-role">Wellness Retreat Attendee</div>
+        </div>
+        <div class="testimonial-quote-mark">&ldquo;&ldquo;</div>
+        <div class="testimonial-text">
+          "The views from our room were breathtaking, and the service was impeccable. Celestia Bay Hotel is the perfect place to unwind and reconnect with yourself."
+        </div>
+      </div>
+    </section>
+
+    <section class="large-image-section">
+      <img src="../Images/image.png" alt="Large decorative image" class="large-decorative-image" />
+    </section>
+  
+    <script src="../js/home.js"></script>
+  
+    <div id="footer-placeholder"></div>
+  
+    <script>
+      fetch('components/footer.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('footer-placeholder').innerHTML = html;
+        });
+    </script>
+    <script src="../js/gallery-carousel.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/api-service.js"></script>
+    <script src="../js/auth-manager.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/gallery.js"></script>
+  </body>
+</html>

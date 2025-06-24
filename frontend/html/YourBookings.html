@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celestia Day - Your Bookings</title>
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/YourBookings.css" />
+    <link rel="stylesheet" href="../css/SingleRoom.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@400;700&family=Abhaya+Libre+ExtraBold&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .user-info {
+        display: none;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 15px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+      }
+      .user-info img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+      .user-info .user-details {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9em;
+      }
+      .user-info .username {
+        font-weight: 600;
+        color: #fff;
+      }
+      .user-info .datetime {
+        font-size: 0.8em;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .auth-buttons {
+        display: flex;
+        gap: 10px;
+      }
+      .logout-btn {
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .logout-btn:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="left-nav">
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="Services.html">SERVICES</a></li>
+          <li><a href="reservations.html">RESERVATIONS</a></li>
+          <li><a href="YourBookings.html">MY BOOKINGS</a></li>
+        </ul>
+      </nav>
+      <div class="logo-container">
+        <img src="../Images/Logo.png" alt="Celestia Day Logo" class="logo" />
+      </div>
+      <nav class="right-nav">
+        <ul>
+          <li><a href="AboutUs.html">ABOUT US</a></li>
+          <li><a href="ContactUs.html">CONTACT US</a></li>
+          <li><a href="Gallery.html">GALLERY</a></li>
+        </ul>
+      </nav>
+      <div class="header-buttons">
+        <!-- Auth buttons for logged out state -->
+        <div class="auth-buttons">
+          <button class="register-btn">Register</button>
+          <button class="signin-btn">Sign In</button>
+        </div>
+        <!-- User info for logged in state -->
+        <div class="user-info">
+          <img src="../Images/user-avatar.png" alt="User Avatar" />
+          <div class="user-details">
+            <span class="username"></span>
+            <span class="datetime"></span>
+          </div>
+          <button class="logout-btn">Logout</button>
+        </div>
+      </div>
+    </header>
+    <section class="promo-ribbon">
+        <p>&#9670; EXCLUSIVE OFFER: ENJOY 20% OFF YOUR FIRST STAY — LIMITED TIME ONLY! BOOK NOW. &#9670; EXCLUSIVE OFFER: ENJOY 20% OFF YOUR FIRST STAY — LIMITED TIME ONLY! BOOK NOW. &#9670; EXCLUSIVE OFFER: ENJOY 20% OFF YOUR FIRST STAY — LIMITED TIME ONLY! BOOK NOW.</p>
+    </section>
+    <main class="your-bookings-main">
+      <h1 class="your-bookings-title">Your Bookings</h1>
+      <div class="your-bookings-subtitle">YOUR ESCAPES, CONFIRMED. VIEW, EDIT, OR GET READY FOR YOUR NEXT CELESTIA BAY STAY...</div>
+      <div class="bookings-list">
+        <!-- Booking Card 1 -->
+        <div class="booking-card">
+          <div class="booking-card-image">
+            <img src="../Images/Interior/Rooms/Untitled design (41).png" alt="Double Room" />
+          </div>
+          <div class="booking-card-details">
+            <div class="booking-card-header">
+              <span class="room-name">Double Rooms</span>
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="rating-badge">9.5</span>
+              <span class="reviews">- 1200 Reviews</span>
+            </div>
+            <div class="booking-card-info">
+              <div class="checkin">
+                <span class="label">Check-in</span>
+                <span class="value">Tue, 09 Jul, 2025</span>
+                <span class="secondary">From 02:00 PM</span>
+              </div>
+              <div class="checkout">
+                <span class="label">Check-out</span>
+                <span class="value">Wed, 10 Jul, 2025</span>
+                <span class="secondary">Until 02:00 PM</span>
+              </div>
+            </div>
+          </div>
+          <div class="booking-card-summary">
+            <div class="summary-top">
+              <span class="summary-room">1 room | 1 night</span>
+              <span class="summary-price">LKR 40,000</span>
+            </div>
+            <span class="summary-taxes">Taxes incl.</span>
+            <button class="view-details-btn">View Details</button>
+          </div>
+        </div>
+        <!-- Booking Card 2 -->
+        <div class="booking-card">
+          <div class="booking-card-image">
+            <img src="../Images/Interior/Rooms/Untitled design (20).png" alt="Suite" />
+          </div>
+          <div class="booking-card-details">
+            <div class="booking-card-header">
+              <span class="room-name">Suite</span>
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="rating-badge">9.5</span>
+              <span class="reviews">- 1200 Reviews</span>
+            </div>
+            <div class="booking-card-info">
+              <div class="checkin">
+                <span class="label">Check-in</span>
+                <span class="value">Tue, 09 Jul, 2025</span>
+                <span class="secondary">From 02:00 PM</span>
+              </div>
+              <div class="checkout">
+                <span class="label">Check-out</span>
+                <span class="value">Wed, 10 Jul, 2025</span>
+                <span class="secondary">Until 02:00 PM</span>
+              </div>
+            </div>
+          </div>
+          <div class="booking-card-summary">
+            <div class="summary-top">
+              <span class="summary-room">1 room | 1 night</span>
+              <span class="summary-price gold">LKR 59,000</span>
+            </div>
+            <span class="summary-taxes">Taxes incl.</span>
+            <button class="view-details-btn">View Details</button>
+          </div>
+        </div>
+        <!-- Booking Card 3 -->
+        <div class="booking-card">
+          <div class="booking-card-image">
+            <img src="../Images/Interior/Rooms/Untitled design (42).png" alt="Single Room" />
+          </div>
+          <div class="booking-card-details">
+            <div class="booking-card-header">
+              <span class="room-name">Single Rooms</span>
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="rating-badge">9.5</span>
+              <span class="reviews">- 1200 Reviews</span>
+            </div>
+            <div class="booking-card-info">
+              <div class="checkin">
+                <span class="label">Check-in</span>
+                <span class="value">Tue, 09 Jul, 2025</span>
+                <span class="secondary">From 02:00 PM</span>
+              </div>
+              <div class="checkout">
+                <span class="label">Check-out</span>
+                <span class="value">Wed, 10 Jul, 2025</span>
+                <span class="secondary">Until 02:00 PM</span>
+              </div>
+            </div>
+          </div>
+          <div class="booking-card-summary">
+            <div class="summary-top">
+              <span class="summary-room">1 room | 1 night</span>
+              <span class="summary-price green">LKR 22,000</span>
+            </div>
+            <span class="summary-taxes">Taxes incl.</span>
+            <button class="view-details-btn">View Details</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section class="large-image-section">
+      <img src="../Images/image.png" alt="Large decorative image" class="large-decorative-image" />
+    </section>
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch('components/footer.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('footer-placeholder').innerHTML = html;
+        });
+    </script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/nav-buttons.js"></script>
+    <script src="../js/api-service.js"></script>
+    <script src="../js/auth-manager.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/bookings.js"></script>
+    <section class="booking-list" id="booking-list"></section>
+    <script src="../js/yourBookings.js"></script>
+  </body>
+</html>

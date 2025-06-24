@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Celestia Day - Signup</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/index.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .signup-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+    /* Add a loading spinner if needed */
+    .signup-btn:disabled::after {
+      content: '...';
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <img src="../Images/Logo.png" alt="Celestia Day Logo" class="logo" />
+      <h2>Get Started Now</h2>
+      <form class="signup-form" id="signupForm">
+        <div class="input-row">
+          <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required />
+          <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required />
+        </div>
+        <input type="text" id="username" name="username" placeholder="Enter your user name" required />
+        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required />
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+        <div class="input-row">
+          <input type="text" id="houseNo" name="houseNo" placeholder="Enter your house number" required />
+          <input type="text" id="laneName" name="laneName" placeholder="Enter your lane name" required />
+        </div>
+        <input type="text" id="cityName" name="cityName" placeholder="Enter your city name" required />
+
+        <label class="checkbox-container">
+          <input type="checkbox" required />
+          <span>I agree to the terms & policy</span>
+        </label>
+
+        <button type="submit" class="signup-btn">Signup</button>
+
+        <div class="or-divider"><span>or</span></div>
+
+        <div class="social-login">
+          <button type="button" class="google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/512px-Google_%22G%22_logo.svg.png" alt="Google logo" width="20" height="20">
+            Sign in with Google
+          </button>
+          <button type="button" class="apple">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/481px-Apple_logo_black.svg.png" alt="Apple logo" width="20" height="20">
+            Sign in with Apple
+          </button>
+        </div>
+
+        <p class="signin-link">Have an account? <a href="login.html">Sign In</a></p>
+      </form>
+    </div>
+
+    <div class="image-section">
+      <img src="../Images/Interior/Reception and halls/ed biffet (9).png" alt="Lobby Background" />
+    </div>
+  </div>
+  <script src="../js/api-service.js"></script>
+  <script src="../js/auth-manager.js"></script>
+  <script src="../js/signup.js"></script>
+  <script>
+    // Add immediate feedback that scripts are loading
+    console.log('All scripts loaded');
+    // Check if the form is found immediately after scripts load
+    window.addEventListener('load', () => {
+      const form = document.getElementById('signupForm');
+      console.log('Form found after window load:', form);
+    });
+  </script>
+</body>
+</html>

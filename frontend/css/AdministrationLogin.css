@@ -1,0 +1,19 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body,html{height:100%;font-family:'Inter',sans-serif;}
+
+.login-hero{height:100%;background:url('../Images/Hotel and outdoors/pexels-stijn-dijkstra-1306815-29989229.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;}
+
+.login-hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55);}
+
+.login-card{position:relative;z-index:1;width:380px;background:#ffffffee;border-radius:8px;padding:40px 48px;text-align:center;}
+.logo{width:240px;margin:0 auto 12px;}
+.welcome{font-family:'Montserrat',sans-serif;font-size:32px;font-weight:700;margin:12px 0 8px;color:#03241F;}
+.subtitle{font-size:14px;color:#555;margin-bottom:24px;}
+.login-form{display:flex;flex-direction:column;text-align:left;gap:14px;}
+.login-form label{font-size:14px;font-weight:600;color:#03241F;}
+.login-form input,.login-form select{padding:10px 12px;border:1px solid #ccc;border-radius:4px;font-size:14px;font-family:'Inter',sans-serif;}
+.login-form select{appearance:none;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2303241F'/%3E%3C/svg%3E") right 12px center / 10px no-repeat;}
+.form-row.between{display:flex;justify-content:space-between;align-items:center;font-size:12px;}
+.forgot{color:#03241F;text-decoration:none;font-size:12px;}
+.login-btn{margin-top:10px;background:#3F6736;color:#fff;border:none;border-radius:4px;padding:10px;font-size:16px;font-weight:600;cursor:pointer;transition:background .2s;}
+.login-btn:hover{background:#2d4d27;}

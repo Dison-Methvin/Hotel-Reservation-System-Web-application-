@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celestia Day - Reservations</title>
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/SingleRoom.css" />
+    <link rel="stylesheet" href="../css/ConfirmReservation.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@400;700&family=Abhaya+Libre+ExtraBold&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>    <header class="main-header">
+      <nav class="left-nav">
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="Services.html">SERVICES</a></li>
+          <li><a href="reservations.html">RESERVATIONS</a></li>
+          <li><a href="YourBookings.html">MY BOOKINGS</a></li>
+        </ul>
+      </nav>
+      <div class="logo-container">
+        <img src="../Images/Logo.png" alt="Celestia Day Logo" class="logo" />
+      </div>
+      <nav class="right-nav">
+        <ul>
+          <li><a href="AboutUs.html">ABOUT US</a></li>
+          <li><a href="ContactUs.html">CONTACT US</a></li>
+          <li><a href="Gallery.html">GALLERY</a></li>
+        </ul>
+      </nav>
+      <div class="header-right-section">
+        <button class="register-btn">Register</button>
+        <button class="signin-btn">Sign In</button>
+      </div>
+    </header>
+    <section class="promo-ribbon">
+        <p>&#9670; EXCLUSIVE OFFER: ENJOY 20% OFF YOUR FIRST STAY — LIMITED TIME ONLY! BOOK NOW. &#9670; EXCLUSIVE OFFER: ENJOY 20% OFF YOUR FIRST STAY — LIMITED TIME ONLY! BOOK NOW. &#9670; EXCLUSIVE OFFER: ENJOY 20% OFF YOUR FIRST STAY — LIMITED TIME ONLY! BOOK NOW.</p>
+    </section>
+    <section class="confirm-reservation-container">
+      <div class="confirm-reservation-title left-emphasis-title">Confirm Reservation</div>
+      <div class="reservation-content">
+        <div class="left-column">
+          <form class="user-details-form two-column-grid">
+            <h2 class="form-title">Your Details</h2>
+            <div class="form-group">
+              <label for="first-name">First name <span class="required">*</span></label>
+              <input type="text" id="first-name" placeholder="First Name" required />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last name <span class="required">*</span></label>
+              <input type="text" id="last-name" placeholder="Last Name" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="phone" placeholder="Phone Number" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" placeholder="Email address" required />
+            </div>
+            <div class="form-group date-time-group">
+              <label for="checkin-date">Check In Date <span class="required">*</span></label>
+              <div class="input-with-icon">
+                <input type="date" id="checkin-date" required title="Check In Date" placeholder="Check In Date" />
+                <span class="icon">
+                  <svg width="18" height="18" fill="none" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </span>
+              </div>
+            </div>
+            <div class="form-group date-time-group">
+              <label for="checkout-date">Check Out Date <span class="required">*</span></label>
+              <div class="input-with-icon">
+                <input type="date" id="checkout-date" required title="Check Out Date" placeholder="Check Out Date" />
+                <span class="icon">
+                  <svg width="18" height="18" fill="none" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </span>
+              </div>
+            </div>
+            <div class="form-group date-time-group">
+              <label for="checkin-time">Check In Time</label>
+              <div class="input-with-icon">
+                <input type="time" id="checkin-time" required title="Check In Time" placeholder="Check In Time" />
+                <span class="icon">
+                  <svg width="18" height="18" fill="none" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </span>
+              </div>
+            </div>
+            <div class="form-group date-time-group">
+              <label for="checkout-time">Check Out Time</label>
+              <div class="input-with-icon">
+                <input type="time" id="checkout-time" required title="Check Out Time" placeholder="Check Out Time" />
+                <span class="icon">
+                  <svg width="18" height="18" fill="none" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </span>
+              </div>
+            </div>
+            <div class="form-group full-width special-request-full-width">
+              <label for="special-request" class="visually-hidden">Special requests to hotel</label>
+              <input type="text" id="special-request" class="special-request" placeholder="Special requests to hotel" />
+            </div>
+            <div class="form-group full-width special-request-full-width">
+              <label for="Bar details" class="visually-hidden">Bar details</label>
+              <input type="text" id="Bardetails" class="special-request" placeholder="Bardetails" />
+            </div>
+          </form>
+          <!-- Payment and Billing Section START -->
+          <div class="payment-billing-section">
+            <h2 class="section-title">Payment Information</h2>
+            <div class="payment-grid">
+              <div class="form-group">
+                <label for="card-name">Name on card</label>
+                <input type="text" id="card-name" placeholder="Name on card" required />
+              </div>
+              <div class="form-group">
+                <label for="card-number">Credit Card Number <span class="required">*</span></label>
+                <input type="text" id="card-number" placeholder="Credit Card Number" required />
+              </div>
+              <div class="form-group">
+                <label for="exp-month">Expiration Date <span class="required">*</span></label>
+                <div class="exp-date-row">
+                  <select id="exp-month" required title="Expiration Month">
+                    <option value="">Month</option>
+                    <option>01</option><option>02</option><option>03</option><option>04</option>
+                    <option>05</option><option>06</option><option>07</option><option>08</option>
+                    <option>09</option><option>10</option><option>11</option><option>12</option>
+                  </select>
+                  <select id="exp-year" required title="Expiration Year">
+                    <option value="">Year</option>
+                    <option>2024</option><option>2025</option><option>2026</option>
+                    <option>2027</option><option>2028</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV/CVC <span class="required">*</span></label>
+                <input type="text" id="cvv" placeholder="CVV/CVC" required />
+              </div>
+            </div>
+            <h2 class="section-title">Billing Address</h2>
+            <div class="billing-grid">
+              <div class="form-group">
+                <label for="billing-first-name">First name</label>
+                <input type="text" id="billing-first-name" placeholder="First name" />
+              </div>
+              <div class="form-group">
+                <label for="billing-last-name">Last name</label>
+                <input type="text" id="billing-last-name" placeholder="Last name" />
+              </div>
+              <div class="form-group">
+                <label for="billing-phone">Phone Number</label>
+                <input type="tel" id="billing-phone" placeholder="Phone Number" />
+              </div>
+              <div class="form-group">
+                <label for="billing-email">Email Address</label>
+                <input type="email" id="billing-email" placeholder="Email address" />
+              </div>
+              <div class="form-group">
+                <label for="billing-country">Country</label>
+                <select id="billing-country" title="Country">
+                  <option value="">Country</option>
+                  <option>Sri Lanka</option>
+                  <option>India</option>
+                  <option>UK</option>
+                  <option>USA</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="billing-state">State/Province</label>
+                <input type="text" id="billing-state" placeholder="State/Province" />
+              </div>
+              <div class="form-group">
+                <label for="billing-zip">Postal (ZIP) Code</label>
+                <input type="text" id="billing-zip" placeholder="Postal (ZIP) Code" />
+              </div>
+            </div>
+            <div class="action-buttons">
+              <button class="edit-btn" type="button">Edit Reservation</button>
+              <button class="confirm-btn" type="submit">Confirm & Proceed</button>
+              <button class="delete-btn" type="button">Delete Reservation</button>
+            </div>
+          </div>
+          <!-- Payment and Billing Section END -->
+        </div>
+        <div class="booking-summary">
+          <!-- Thin horizontal space -->
+          <div class="thin-divider-space"></div>
+          <!-- Room Details Card -->
+          <div class="room-details-card">
+            <img src="../Images/Interior/Rooms/Untitled design (41).png" alt="Room" class="room-image" id="card-room-image" />
+            <h3 id="card-room-name">Room</h3>
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <span class="rating-badge" id="card-rating">--</span><span class="reviews" id="card-reviews">- 0 Reviews</span>
+            <div class="amenities">
+              <span class="amenity"><svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg> Free Wi-Fi</span>
+              <span class="amenity"><svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4l2-3 2 3h4a2 2 0 0 1 2 2z"/></svg> Room Service</span>
+              <span class="amenity"><svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><circle cx="12" cy="16.5" r="2.5"/></svg> Safe</span>
+            </div>
+            <div class="parking"><svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="13" rx="2"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg> Parking Garage</div>
+          </div>
+          <!-- Booking Details Card -->
+          <div class="booking-details-card">
+            <h3>Your booking details</h3>
+            <div class="details-row">
+              <div class="details-col">
+                <div class="details-label">Check-in</div>
+                <div class="details-value" id="display-checkin-date">--</div>
+                <div class="details-secondary" id="display-checkin-time">From --:--</div>
+              </div>
+              <div class="details-col">
+                <div class="details-label">Check-out</div>
+                <div class="details-value" id="display-checkout-date">--</div>
+                <div class="details-secondary" id="display-checkout-time">Until --:--</div>
+              </div>
+            </div>
+            <div class="summary-row">Double Room</div>
+            <div class="summary-row">1 night, 2 adults, 0 children</div>
+          </div>
+          <!-- Room & Rate Selection Card -->
+          <div class="booking-details-card">
+            <h3>Choose your options</h3>
+            <div class="form-group">
+              <label for="select-room-type">Room type</label>
+              <select id="select-room-type">
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="suite">Suite</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="select-rate">Rate plan</label>
+              <select id="select-rate">
+                <option data-unit="night" data-price="12000">LKR 12,000 per night</option>
+                <option data-unit="week" data-price="80000">LKR 80,000 per week</option>
+                <option data-unit="month" data-price="320000">LKR 320,000 per month</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="input-guests">Guests</label>
+              <input type="number" id="input-guests" min="1" value="1" />
+            </div>
+          </div>
+
+          <!-- Pricing Summary Card -->
+          <div class="booking-details-card pricing-summary-card">
+            <h3>Pricing Summary</h3>
+            <div class="pricing-row"><span id="pricing-nights">1 room x 1 night</span><span id="pricing-subtotal">LKR 0</span></div>
+            <div class="pricing-row"><span>Tax and service fees <span class="pricing-arrow">&#9660;</span></span><span id="pricing-tax">LKR 0</span></div>
+            <hr class="custom-hr" />
+            <div class="pricing-row total"><span>Total</span><span id="pricing-grand-total">LKR 0</span></div>
+          </div>
+
+          <!-- Early Bird Offer Image Card -->
+          <div class="booking-details-card early-bird-card">
+            <img src="../Images/promo.png" alt="Early Bird Escape Offer" class="early-bird-img" />
+          </div>
+          <div class="booking-details-card early-bird-card">
+            <img src="../Images/promo.png" alt="Early Bird Escape Offer" class="early-bird-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+     <!-- Large Image Section -->
+    <section class="large-image-section">
+      <img src="../Images/image.png" alt="Large decorative image" class="large-decorative-image" />
+    </section>
+    <div id="footer-placeholder"></div>
+
+    <script>
+      fetch('components/footer.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('footer-placeholder').innerHTML = html;
+        });
+    </script>
+    <!-- API helper must be loaded before the ConfirmReservation script -->
+    <script src="../js/api-service.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/confirmReservation.js"></script>
+  </body>
+</html>

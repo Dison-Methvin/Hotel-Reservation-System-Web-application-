@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celestia Bay - Home</title>
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/Services.css" />
+     <!-- put this BEFORE your own stylesheets -->
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@400;700&family=Abhaya+Libre+ExtraBold&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/air-datepicker@3.3.5/air-datepicker.css" />
+  <style>
+    .user-info {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 15px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+    }
+    .user-info img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+    .user-info .user-details {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.9em;
+    }
+    .user-info .username {
+      font-weight: 600;
+      color: #fff;
+    }
+    .user-info .datetime {
+      font-size: 0.8em;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .logout-btn {
+      background-color: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .logout-btn:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    .guest-details {
+      display: none;
+    }
+  </style>
+  <script src="../js/room-redirect.js" defer></script>
+  <script src="https://unpkg.com/air-datepicker@3.3.5/air-datepicker.js" defer></script>
+</head>
+<body>
+  <header class="main-header">
+    <nav class="left-nav">
+      <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="Services.html">SERVICES</a></li>
+        <li><a href="reservations.html">RESERVATIONS</a></li>
+        <li><a href="YourBookings.html">MY BOOKINGS</a></li>
+      </ul>
+    </nav>
+
+    <div class="logo-container">
+      <img src="../Images/Logo.png" alt="Celestia Bay Logo" class="logo" />
+    </div>
+
+    <nav class="right-nav">
+      <ul>
+        <li><a href="AboutUs.html">ABOUT US</a></li>
+        <li><a href="ContactUs.html">CONTACT US</a></li>
+        <li><a href="Gallery.html">GALLERY</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-buttons">
+      <!-- Auth buttons (visible when NOT logged in) -->
+      <div class="auth-buttons">
+        <button class="register-btn" type="button">Register</button>
+        <button class="signin-btn" type="button">Sign In</button>
+      </div>
+
+      <!-- User info (visible when logged in) -->
+      <div class="user-info">
+        <img src="../Images/user-avatar.png" alt="User Avatar" />
+        <div class="user-details">
+          <span class="username"></span>
+          <span class="datetime"></span>
+        </div>
+        <button class="logout-btn" type="button">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="hero-section">
+    <div class="hero-content">
+      <p class="welcome-text">WELCOME TO</p>
+      <h1 class="hotel-name">CELESTIA BAY</h1>
+      <p class="tagline">Book your stay and enjoy Luxury redefined at the most affordable <br /> rates.</p>
+    </div>
+    <!-- Booking form -->
+    <form id="bookingForm" class="booking-form">
+      <div class="form-field">
+        <label for="check-in-input">Check In</label>
+        <input type="date" id="check-in-input" required />
+      </div>
+      <div class="form-field">
+        <label for="check-out-input">Check Out</label>
+        <input type="date" id="check-out-input" required />
+      </div>
+      <div class="form-field">
+        <label for="roomSelection">Room Type</label>
+        <select id="roomSelection" required>
+          <option value="">Select Room Type</option>
+          <option value="single">Single Room - Single Guest</option>
+          <option value="double">Double Room - 2 Adults + 1 Child</option>
+        </select>
+      </div>
+      <div class="form-field guest-details">
+        <label>Number of Guests</label>
+        <div class="guest-inputs">
+          <div class="guest-type">
+            <label for="adultCount">Adults</label>
+            <input type="number" id="adultCount" min="1" max="4" value="1" />
+          </div>
+          <div class="guest-type">
+            <label for="childCount">Children</label>
+            <input type="number" id="childCount" min="0" max="2" value="0" />
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="book-now-btn">Book Now</button>
+    </form>
+  </main>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="stats-content">
+      <h3>Take a look at our numbers</h3>
+      <p>Proud to know that we are the best in the industry.</p>
+    </div>
+    <div class="stats-numbers">
+      <div class="stat">
+        <div class="stat-number">99%</div>
+        <div class="stat-label">Customer Satisfaction</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">50M+</div>
+        <div class="stat-label">Bookings</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">2,600+</div>
+        <div class="stat-label">Successful Events</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Celebratory Text Section -->
+  <section class="celebratory-text-section">
+    <h2 class="celebratory-main-text">Celebrate Life's Finest Moments in Style</h2>
+    <p class="celebratory-description">AT CELESTIA BAY, WE CREATE EXTRAORDINARY SETTINGS FOR UNFORGETTABLE EVENTS, WHETHER YOU'RE PLANNING AN INTIMATE GATHERING OR A GRAND CELEBRATION.</p>
+    <h2 class="celebratory-sub-text">and Elegance</h2>
+  </section>
+
+  <!-- Events Gallery Section -->
+  <section class="events-gallery-section">
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="../Images/Events/pexels-emma-bauso-1183828-3585806.jpg" alt="Outdoor wedding setup">
+        <div class="item-label">Weddings</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../Images/Events/pexels-mastercowley-1128783.jpg" alt="Celebrations">
+        <div class="item-label">Celebrations</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../Images/Events/pexels-imagestudio-2472858.jpg" alt="Big Days">
+        <div class="item-label">Big Days</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../Images/Food and beverages/Untitled design (21).png" alt="BBQ">
+        <div class="item-label">BBQ</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../Images/Food and beverages/Untitled design (20).png" alt="Special Celebrations">
+        <div class="item-label">Special Celebrations</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../Images/Hotel and outdoors/Untitled design (29).png" alt="Family Time">
+        <div class="item-label">Family Time</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Header Section -->
+  <section class="testimonials-header-section">
+    <h2 class="testimonials-main-text">What Our Guests Say</h2>
+    <p class="testimonials-description">EXCEPTIONAL EXPERIENCES, SHARED BY THOSE WHO'VE LIVED THEM.</p>
+  </section>
+
+  <!-- Testimonials Content Container -->
+  <section class="testimonials-content-container">
+    <div class="testimonials-box">
+      <!-- Testimonial Cards -->
+      <div class="testimonials-grid">
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+          <div class="card-header">
+            <img src="../Images/avatars/avatar1.png" alt="Avatar" class="avatar" />
+            <p class="guest-name">Amara & Jonathan W.</p>
+          </div>
+          <p class="testimonial-text">"Celestia Bay Hotel was the perfect escape for our anniversary. The ocean views from our room were breathtaking, and the staff made us feel so special from the moment we arrived. We can't wait to come back!"</p>
+          <p class="testimonial-date">5/27/19</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <div class="card-header">
+            <img src="../Images/avatars/avatar2.png" alt="Avatar" class="avatar" />
+            <p class="guest-name">Priyanka T.</p>
+          </div>
+          <p class="testimonial-text">"From the fresh seafood dinners to the delicious cocktails at sunset, Celestia Bay's dining options were a highlight of our stay. Each meal was beautifully presented and full of flavor."</p>
+          <p class="testimonial-date">1/15/20</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+          <div class="card-header">
+            <img src="../Images/avatars/avatar3.png" alt="Avatar" class="avatar" />
+            <p class="guest-name">Ethan M.</p>
+          </div>
+          <p class="testimonial-text">"Waking up to the sound of the waves, enjoying morning walks on the private beach, and lounging with a book by the infinity pool. Celestia Bay Hotel is truly a hidden gem!"</p>
+          <p class="testimonial-date">5/19/12</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="testimonial-card">
+          <div class="card-header">
+            <img src="../Images/avatars/avatar4.png" alt="Avatar" class="avatar" />
+            <p class="guest-name">The De Silva Family</p>
+          </div>
+          <p class="testimonial-text">"We brought our kids for a week-long holiday and had the best time! The pool area was perfect for them, and we loved the relaxing atmosphere. Celestia Bay really caters to all ages."</p>
+          <p class="testimonial-date">5/19/25</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="testimonial-card">
+          <div class="card-header">
+            <img src="../Images/avatars/avatar5.png" alt="Avatar" class="avatar" />
+            <p class="guest-name">Liam R.</p>
+          </div>
+          <p class="testimonial-text">"I've stayed at many resorts, but Celestia Bay stands out for its exceptional hospitality. Every staff member greeted us warmly, and our room was spotless every day. Five stars without a doubt!"</p>
+          <p class="testimonial-date">5/19/25</p>
+        </div>
+      </div>
+      <!-- Star Rating Box -->
+      <div class="star-rating-container">
+        <h3 class="star-rating-title">Star Rating</h3>
+        <div class="star-rating-breakdown">
+          <div class="rating-row">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">83</span>
+          </div>
+          <div class="rating-row">
+            <span class="stars">★★★★☆</span>
+            <span class="rating-count">24</span>
+          </div>
+          <div class="rating-row">
+            <span class="stars">★★★☆☆</span>
+            <span class="rating-count">10</span>
+          </div>
+          <div class="rating-row">
+            <span class="stars">★★☆☆☆</span>
+            <span class="rating-count">26</span>
+          </div>
+          <div class="rating-row">
+            <span class="stars">★☆☆☆☆</span>
+            <span class="rating-count">34</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us-section">
+    <div class="why-choose-us-images">
+      <img src="../Images/Hotel and outdoors/pexels-stijn-dijkstra-1306815-29989229.jpg" alt="Family" class="image-family">
+      <img src="../Images/Hotel and outdoors/pool-4392060_1280.jpg" alt="Hotel Interior" class="image-hotel-interior">
+    </div>
+    <div class="why-choose-us-content">
+      <h2 class="why-choose-us-title">Why You Should Choose Us</h2>
+      <p class="why-choose-us-description">At Celestia Bay Hotel, we don't just offer accommodation – we offer an unforgettable experience. Here's why our guests choose us time and time again:</p>
+      <div class="why-choose-us-features">
+        <div class="feature-column">
+          <p class="feature-item"><span class="checkmark">&#10003;</span> Breathtaking Beachfront Location</p>
+          <p class="feature-item"><span class="checkmark">&#10003;</span> Exceptional Service</p>
+        </div>
+        <div class="feature-column">
+          <p class="feature-item"><span class="checkmark">&#10003;</span> Wide Range of Properties</p>
+      <button class="learn-more-btn" type="button">Learn More <span class="arrow">&rarr;</span></button>
+        </div>
+      </div>
+      <button class="learn-more-btn">Learn More <span class="arrow">&rarr;</span></button>
+    </div>
+  </section>
+  <section class="built-for-everyone-section">
+    <h2 class="built-for-everyone-title">Built For Everyone</h2>
+    <div class="roles-container">
+      <div class="role-card">
+        <div class="role-icon">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H9C7.93913 15 6.92172 15.4214 6.17157 16.1716C5.42143 16.9217 5 17.9391 5 19V21" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 21V19C20.9999 18.0617 20.7303 17.1471 20.2183 16.3619C19.7064 15.5767 18.9712 14.9575 18.106 14.5714" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 21V19C3.00012 18.0617 3.26972 17.1471 3.78168 16.3619C4.29364 15.5767 5.02877 14.9575 5.894 14.5714" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 7C18 7.64993 17.8931 8.29302 17.6854 8.90483C17.4776 9.51664 17.1732 10.0906 16.7869 10.6124C16.4006 11.1342 15.9391 11.6033 15.4214 12.0005C14.9037 12.3976 14.3364 12.7196 13.737 12.9555" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 7C6 7.64993 6.10688 8.29302 6.31464 8.90483C6.5224 9.51664 6.82679 10.0906 7.21312 10.6124C7.59945 11.1342 8.06094 11.6033 8.57861 12.0005C9.09628 12.3976 9.66363 12.7196 10.263 12.9555" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="role-title">Customers</h3>
+        <p class="role-description">Book rooms, manage reservations,<br />and track billing</p>
+      </div>
+      <div class="role-card">
+        <div class="role-icon">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 21V11L12 3L2 11V21H6V15H18V21H22ZM10 13H14V17H10V13Z" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="role-title">Travel Companies</h3>
+        <p class="role-description">Block bookings with special<br />discounts</p>
+      </div>
+      <div class="role-card">
+        <div class="role-icon">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 7V12L15 15" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="role-title">Hotel Clerks</h3>
+        <p class="role-description">Manage check-ins, check-outs,<br />and room assignments</p>
+      </div>
+      <div class="role-card">
+        <div class="role-icon">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 2V8H20" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 13H8" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 17H8" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 9H8" stroke="#03241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="role-title">Managers</h3>
+        <p class="role-description">Access reports, analytics, and<br />system management</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Large Image Section -->
+  <section class="large-image-section">
+    <img src="../Images/image.png" alt="Large decorative image" class="large-decorative-image" />
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch('components/footer.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      });
+  </script>
+
+  <!-- JS dependencies -->
+  <script src="../js/api-service.js"></script>
+  <script src="../js/auth-manager.js"></script>
+  <script src="../js/header.js"></script>
+  <script src="../js/home.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/nav-buttons.js"></script>
+</body>
+</html>

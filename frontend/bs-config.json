@@ -1,0 +1,13 @@
+{
+    "port": 3000,    "server": {
+        "baseDir": ".",
+        "routes": {
+            "/node_modules": "node_modules",
+            "/": "."
+        }
+    },
+    "files": [
+        "./**/*.{html,htm,css,js}"
+    ],
+    "startPath": "/html/home.html"
+}

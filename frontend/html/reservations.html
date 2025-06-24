@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celestia Day - Reservations</title>
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/reservations.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@400;700&family=Abhaya+Libre+ExtraBold&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .user-info {
+        display: none;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 15px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+      }
+      .user-info img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+      .user-info .user-details {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9em;
+      }
+      .user-info .username {
+        font-weight: 600;
+        color: #fff;
+      }
+      .user-info .datetime {
+        font-size: 0.8em;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .auth-buttons {
+        display: flex;
+        gap: 10px;
+      }
+      .logout-btn {
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .logout-btn:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    </style>
+    <script src="../js/room-redirect.js" defer></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="left-nav">
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="Services.html">SERVICES</a></li>
+          <li><a href="reservations.html">RESERVATIONS</a></li>
+          <li><a href="YourBookings.html">MY BOOKINGS</a></li>
+        </ul>
+      </nav>
+      <div class="logo-container">
+        <img src="../Images/Logo.png" alt="Celestia Day Logo" class="logo" />
+      </div>
+      <nav class="right-nav">
+        <ul>
+          <li><a href="AboutUs.html">ABOUT US</a></li>
+          <li><a href="ContactUs.html">CONTACT US</a></li>
+          <li><a href="Gallery.html">GALLERY</a></li>
+        </ul>
+      </nav>
+      <div class="header-buttons">
+        <!-- Auth buttons for logged out state -->
+        <div class="auth-buttons">
+          <button class="register-btn">Register</button>
+          <button class="signin-btn">Sign In</button>
+        </div>
+        <!-- User info for logged in state -->
+        <div class="user-info">
+          <img src="../Images/user-avatar.png" alt="User Avatar" />
+          <div class="user-details">
+            <span class="username"></span>
+            <span class="datetime"></span>
+          </div>
+          <button class="logout-btn">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="hero-section">
+      <div class="hero-content">
+        <p class="welcome-text">WELCOME TO</p>
+        <h1 class="hotel-name">CELESTIA BAY</h1>
+        <p class="tagline">
+          Book your stay and enjoy Luxury redefined at the most affordable <br />
+          rates.
+        </p>
+      </div>
+      <div class="booking-form-container">
+        <form class="booking-form" id="bookingForm">
+          <div class="form-field">
+            <label for="checkInDate">Check In</label>
+            <input type="date" id="checkInDate" title="Check In Date" required>
+          </div>
+          <div class="form-field">
+            <label for="checkOutDate">Check Out</label>
+            <input type="date" id="checkOutDate" title="Check Out Date" required>
+          </div>
+          <div class="form-field">
+            <label for="roomSelection">Room Selection</label>
+            <select id="roomSelection" title="Room Selection" required>
+              <option value="">Select Room Type</option>
+              <option value="single">Single Room - Single Guest</option>
+              <option value="double">Double Room - 2 Guests and 1 Child</option>
+            </select>
+          </div>
+          <div class="form-field guest-details">
+            <span class="visually-hidden">Number of Guests</span>
+            <div class="guest-inputs">
+              <div class="guest-type">
+                <label for="adultCount">Adults</label>
+                <input type="number" id="adultCount" title="Number of Adults" min="1" max="4" value="1" />
+              </div>
+              <div class="guest-type">
+                <label for="childCount">Children</label>
+                <input type="number" id="childCount" title="Number of Children" min="0" max="2" value="0" />
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="book-now-btn">Book Now</button>
+        </form>
+      </div>
+    </main>
+
+    <section class="promo-ribbon">
+      <p>&#9670; EXCLUSIVE OFFER: ENJOY 20% OFF YOUR FIRST STAY — LIMITED TIME ONLY! BOOK NOW. &#9670; EXCLUSIVE OFFER: ENJOY 20% OFF YOUR FIRST STAY — LIMITED TIME ONLY! BOOK NOW. &#9670; EXCLUSIVE OFFER: ENJOY 20% OFF YOUR FIRST STAY — LIMITED TIME ONLY! BOOK NOW.</p>
+    </section>
+
+    <!-- Room Types Section -->
+    <section class="room-types-section">
+      <div class="room-grid">
+        <a href="SingleRoom.html" class="room-card-link">
+        <div class="room-card">
+          <div class="room-image-container">
+            <img src="../Images/Interior/Rooms/bed-8390092_1280.jpg" alt="Single Room" class="room-image" />
+            <div class="room-badges">
+              <span class="badge for-rent">FOR RENT</span>
+              <span class="badge featured">FEATURED</span>
+            </div>
+          </div>
+          <div class="room-details">
+            <h3 class="room-name">Single Room</h3>
+            <p class="room-section">Section 01</p>
+            <div class="room-info">
+              <div class="info-item">
+                <img src="../Images/bed-icon.png" alt="Bed Icon" class="info-icon" />
+                <span>1</span>
+              </div>
+              <div class="info-item">
+                <img src="../Images/bath-icon.png" alt="Bath Icon" class="info-icon" />
+                <span>1</span>
+              </div>
+              <div class="info-item">
+                <img src="../Images/square-icon.png" alt="Square Icon" class="info-icon" />
+                <span>400</span>
+              </div>
+              <div class="room-price">
+                <span>LKR 22,000</span>
+                <span class="price-per-night">/NIGHT</span>
+              </div>
+            </div>
+            <button class="select-room-btn">SELECT</button>
+          </div>
+        </div>
+        </a>
+
+        <a href="DoubleRoom.html" class="room-card-link">
+        <div class="room-card">
+          <div class="room-image-container">
+            <img src="../Images/Interior/Rooms/bed-8407977_1280.jpg" alt="Double Room" class="room-image" />
+            <div class="room-badges">
+              <span class="badge for-rent">FOR RENT</span>
+              <span class="badge featured">FEATURED</span>
+            </div>
+          </div>
+          <div class="room-details">
+            <h3 class="room-name">Double Room</h3>
+            <p class="room-section">Section 02</p>
+            <div class="room-info">
+              <div class="info-item">
+                <img src="../Images/bed-icon.png" alt="Bed Icon" class="info-icon" />
+                <span>2</span>
+              </div>
+              <div class="info-item">
+                <img src="../Images/bath-icon.png" alt="Bath Icon" class="info-icon" />
+                <span>2</span>
+              </div>
+              <div class="info-item">
+                <img src="../Images/square-icon.png" alt="Square Icon" class="info-icon" />
+                <span>400</span>
+              </div>
+              <div class="room-price">
+                <span>LKR 40,000</span>
+                <span class="price-per-night">/NIGHT</span>
+              </div>
+            </div>
+            <button class="select-room-btn">SELECT</button>
+          </div>
+        </div>
+        </a>
+
+        <a href="Suites.html" class="room-card-link">
+        <div class="room-card">
+          <div class="room-image-container">
+            <img src="../Images/Interior/Rooms/bedroom-8429668_1280.jpg" alt="Suite" class="room-image" />
+            <div class="room-badges">
+              <span class="badge for-rent">FOR RENT</span>
+              <span class="badge featured">FEATURED</span>
+            </div>
+          </div>
+          <div class="room-details">
+            <h3 class="room-name">Suite</h3>
+            <p class="room-section">Section 03</p>
+            <div class="room-info">
+              <div class="info-item">
+                <img src="../Images/bed-icon.png" alt="Bed Icon" class="info-icon" />
+                <span>3</span>
+              </div>
+              <div class="info-item">
+                <img src="../Images/bath-icon.png" alt="Bath Icon" class="info-icon" />
+                <span>2</span>
+              </div>
+              <div class="info-item">
+                <img src="../Images/square-icon.png" alt="Square Icon" class="info-icon" />
+                <span>400</span>
+              </div>
+              <div class="room-price">
+                <span>LKR 59,000</span>
+                <span class="price-per-night">/NIGHT</span>
+              </div>
+            </div>
+            <button class="select-room-btn">SELECT</button>
+          </div>
+        </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="facilities-section">
+      <h2 class="facilities-heading">Facilities</h2>
+      <p class="facilities-description">
+        We want your stay at our lush hotel to be truly unforgettable. That is why we give special attention to all of your needs so
+        that we can ensure an experience quite uniquw. Luxury hotels offers the perfect setting with stunning views for leisure
+        and our modern luxury resort facilities will help you enjoy the best of all.
+      </p>
+    </section>
+
+    <section class="image-gallery-section">
+      <div class="image-card">
+        <img src="../Images/Interior/Rooms/Untitled design (35).png" alt="The Gym" class="gallery-image" />
+        <div class="image-title">THE GYM</div>
+      </div>
+      <div class="image-card">
+        <img src="../Images/Interior/Reception and halls/pool-bar-3652849_1280.jpg" alt="Poolside Bar" class="gallery-image" />
+        <div class="image-title">POOLSIDE BAR</div>
+      </div>
+      <div class="image-card">
+        <img src="../Images/Other/pexels-nadin-sh-78971847-19051904.jpg" alt="The Spa" class="gallery-image" />
+        <div class="image-title">THE SPA</div>
+      </div>
+      <div class="image-card">
+        <img src="../Images/Hotel and outdoors/pool-4392060_1280.jpg" alt="Swimming Pool" class="gallery-image" />
+        <div class="image-title">SWIMMING POOL</div>
+      </div>
+      <div class="image-card">
+        <img src="../Images/Food and beverages/hotel-768387_1280.jpg" alt="Restaurant" class="gallery-image" />
+        <div class="image-title">RESTAURANT</div>
+      </div>
+      <div class="image-card">
+        <img src="../Images/Other/pexels-cottonbro-3171204.jpg" alt="Laundry" class="gallery-image" />
+        <div class="image-title">LAUNDRY</div>
+      </div>
+    </section>
+
+    <script src="../js/date-updater.js"></script>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+      fetch('components/footer.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('footer-placeholder').innerHTML = html;
+        });
+    </script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/nav-buttons.js"></script>
+    <script src="../js/api-service.js"></script>
+    <script src="../js/auth-manager.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/reservations.js"></script>
+  </body>
+</html>

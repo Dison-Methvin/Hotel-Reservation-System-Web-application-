@@ -1,0 +1,225 @@
+body {
+  background: #fff;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+.your-bookings-main {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding: 0 32px 40px 32px;
+}
+.your-bookings-title {
+  font-family: 'Abhaya Libre ExtraBold', 'Ephesis', cursive, serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #23223a;
+  margin-bottom: 0.2em;
+  text-align: left;
+  letter-spacing: 1px;
+}
+.your-bookings-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  color: #888;
+  margin-bottom: 2.5em;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.booking-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.booking-card .card-img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.booking-card .card-info {
+  flex: 1;
+}
+.booking-card .card-info h3 {
+  margin: 0 0 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #03241F;
+}
+.booking-card .dates {
+  display: flex;
+  gap: 40px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #444;
+}
+.booking-card .dates span {
+  display: block;
+}
+.booking-card .card-price {
+  text-align: right;
+  min-width: 160px;
+  font-family: 'Montserrat', sans-serif;
+}
+.booking-card .price-line {
+  font-size: 14px;
+  color: #555;
+}
+.booking-card .price-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #C79A02;
+  margin: 4px 0;
+}
+.booking-card small {
+  font-size: 12px;
+  color: #777;
+}
+.booking-card-details {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.booking-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.15rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #23223a;
+}
+.room-name {
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-right: 8px;
+}
+.stars {
+  color: #f5b700;
+  font-size: 1.1rem;
+  margin-right: 6px;
+}
+.rating-badge {
+  background: #1ecb7c;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 2px 8px;
+  margin-right: 6px;
+  margin-left: 2px;
+}
+.reviews {
+  color: #888;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+.booking-card-info {
+  display: flex;
+  gap: 40px;
+  margin-top: 8px;
+}
+.checkin, .checkout {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.label {
+  font-size: 0.98rem;
+  color: #23223a;
+  font-weight: 600;
+}
+.value {
+  font-size: 1.05rem;
+  color: #23223a;
+  font-weight: 700;
+}
+.secondary {
+  font-size: 0.92rem;
+  color: #b0b0b0;
+  font-weight: 400;
+}
+.booking-card-summary {
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  margin-left: 18px;
+}
+.summary-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+.summary-room {
+  font-size: 0.98rem;
+  color: #23223a;
+  font-weight: 500;
+}
+.summary-price {
+  font-size: 1.18rem;
+  color: #f5b700;
+  font-weight: 700;
+  margin-top: 2px;
+}
+.summary-price.gold {
+  color: #f5b700;
+}
+.summary-price.green {
+  color: #1ecb7c;
+}
+.summary-taxes {
+  font-size: 0.92rem;
+  color: #b0b0b0;
+  margin-bottom: 6px;
+}
+.view-details-btn {
+  background: #15382d;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 28px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.view-details-btn:hover {
+  background: #1ecb7c;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .your-bookings-main {
+    padding: 0 8px 32px 8px;
+  }
+  .booking-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px 10px;
+    gap: 18px;
+  }
+  .booking-card-image img {
+    width: 100%;
+    height: 160px;
+  }
+  .booking-card-summary {
+    align-items: flex-start;
+    margin-left: 0;
+    min-width: 0;
+  }
+}

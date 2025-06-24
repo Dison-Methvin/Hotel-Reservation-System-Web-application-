@@ -1,0 +1,12 @@
+{
+  "name": "hotel-reservation-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Hotel Reservation System",
+  "scripts": {
+    "dev": "lite-server",
+    "start": "lite-server"
+  },
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

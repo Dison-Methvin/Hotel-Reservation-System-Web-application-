@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+.hero-section {
+  background-image: url('../Images/Interior/Rooms/bed-8407977_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+  padding-left: 100px; /* Adjust as needed */
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.welcome-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
+    max-width: 600px;
+}
+
+.hotel-name {
+  font-family: 'Abhaya Libre ExtraBold', serif;
+  font-size: 5em;
+  margin: 0;
+  line-height: 1;
+}
+
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5em;
+  max-width: 600px;
+}
+
+.booking-form {
+    background: white;
+    padding: 30px; /* Reverted padding to 30px from sample */
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 20px; /* Reverted gap to 20px from sample */
+    align-items: end; /* Reverted align-items to end from sample */
+    position: absolute;
+    bottom: 20px; /* Set to 0px to align with the bottom of hero section */
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px; /* Reverted gap to 8px from sample */
+}
+
+.form-field label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; /* Reverted font size to 12px from sample */
+  color: #666; /* Reverted color to #666 from sample */
+  font-weight: 600;
+}
+
+.form-field input, .form-field select {
+  font-family: 'Inter', sans-serif;
+  padding: 12px; /* Reverted padding to 12px from sample */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px; /* Reverted font size to 14px from sample */
+  min-width: 150px; /* Reverted min-width to 150px from sample */
+}
+
+.book-now-btn {
+  background: #03241F;
+  color: white;
+  border: none;
+  padding: 12px 24px; /* Reverted padding to 12px 24px from sample */
+  border-radius: 4px;
+  font-size: 14px; /* Reverted font size to 14px from sample */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.book-now-btn:hover {
+  background: #1e3a21;
+}
+
+.promo-ribbon {
+  background-color: #03241F; /* Dark green color from the header */
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9em;
+  font-weight: normal;
+  margin-top: -20px; /* Adjust this value to control how much it overlaps the hero section */
+  position: relative; /* Needed for z-index to work */
+  z-index: 10; /* Ensures it's above other elements if there's overlap */
+}
+
+.promo-ribbon p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Service Feature Section */
+.service-feature-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 60px auto 0 auto;
+  padding: 40px 20px;
+}
+
+.service-feature-text {
+  flex: 1 1 50%;
+  max-width: 540px;
+}
+
+.service-feature-title {
+  font-family: 'Abhaya Libre ExtraBold', serif;
+  font-size: 2.5em;
+  color: #03241F;
+  margin-bottom: 10px;
+}
+
+.service-feature-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  color: #1e3a21;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.service-feature-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05em;
+  color: #444;
+  line-height: 1.7;
+}
+
+.service-feature-image {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-feature-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .service-feature-section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 10px;
+  }
+  .service-feature-image img {
+    max-width: 100%;
+  }
+}
+
+/* 50/50 Service Section */
+.service-50-section {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto 0 auto;
+  min-height: 340px;
+}
+
+.service-50-left {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 40px 0 0;
+}
+
+.service-50-title {
+  font-family: 'Abhaya Libre ExtraBold', serif;
+  font-size: 1.6em;
+  color: #03241F;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.service-50-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92em;
+  color: #03241F;
+  line-height: 1.7;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.service-50-right {
+  flex: 1 1 50%;
+}
+
+@media (max-width: 900px) {
+  .service-50-section {
+    flex-direction: column;
+    min-height: unset;
+  }
+  .service-50-left, .service-50-right {
+    flex: 1 1 100%;
+    padding: 0;
+  }
+  .service-50-left {
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+/* Services Header Section */
+.services-header-section {
+  text-align: center;
+  margin: 0 auto 0 auto;
+  max-width: 700px;
+}
+
+.services-header-title {
+  font-family: 'Ephesis', cursive;
+  font-size: 3.2em;
+  color: #1e3a21;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.services-header-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95em;
+  color: #1e3a21;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.services-header-btn-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.services-header-btn {
+  background: #1e3a21;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 8px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.services-header-btn:hover {
+  background: #03241F;
+}
+
+.service-cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 36px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  width: 260px;
+  margin: 0 8px;
+}
+
+.service-card-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.service-card-title {
+  font-family: 'Abhaya Libre ExtraBold', serif;
+  font-size: 1.1em;
+  color: #03241F;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.service-card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95em;
+  color: #1e3a21;
+  text-align: center;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .service-cards-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .service-card {
+    width: 90vw;
+    max-width: 320px;
+  }
+}
+
+.guest-details {
+  display: none;
+}

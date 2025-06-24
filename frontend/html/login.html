@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Celestia Day - Login</title>
+  <link rel="stylesheet" href="../css/login.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .error-message {
+      color: #dc3545;
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .login-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+    .success-message {
+      color: #28a745;
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <img src="../Images/Logo.png" alt="Celestia Day Logo" class="logo" />
+      <h2>Welcome back!</h2>
+      <p class="subtitle">Enter your Credentials to access your account</p>
+      <form class="login-form" id="loginForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter your username" required />
+          <div class="error-message" id="username-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required />
+          <div class="error-message" id="password-error"></div>
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+
+        <div class="error-message" id="general-error"></div>
+        <div class="success-message" id="success-message"></div>
+
+        <label class="checkbox-container remember-me">
+          <input type="checkbox" id="remember" />
+          <span>Remember for 30 days</span>
+        </label>
+
+        <button type="submit" class="login-btn" id="loginButton">Login</button>
+
+        <div class="or-divider"><span>Or</span></div>
+
+        <div class="social-login">
+          <button type="button" class="google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/512px-Google_%22G%22_logo.svg.png" alt="Google logo" width="20" height="20">
+            Sign in with Google
+          </button>
+          <button type="button" class="apple">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/481px-Apple_logo_black.svg.png" alt="Apple logo" width="20" height="20">
+            Sign in with Apple
+          </button>
+        </div>
+
+        <p class="signin-link">Don't have an account? <a href="index.html">Sign Up</a></p>
+      </form>
+    </div>
+
+    <div class="image-section">
+      <img src="../Images/Interior/Reception and halls/pexels-rich-vijay-149575413-20449069.jpg" alt="Lobby Background" />
+    </div>
+  </div>
+  <script src="../js/api-service.js"></script>
+  <script src="../js/auth-manager.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+</html>

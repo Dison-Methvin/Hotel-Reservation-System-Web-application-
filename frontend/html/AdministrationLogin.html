@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celestia Bay – Admin Login</title>
+  <link rel="stylesheet" href="../css/AdministrationLogin.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <section class="login-hero">
+    <div class="login-card">
+      <img src="../Images/Logo.png" alt="Celestia Bay Logo" class="logo" />
+      <h1 class="welcome">Welcome Back!</h1>
+      <p class="subtitle">Enter your credentials to access your account</p>
+
+      <form id="adminLoginForm" class="login-form">
+        <label for="role">Choose Your Role</label>
+        <select id="role" required>
+          <option value="" disabled selected>Select role</option>
+          <option value="admin">Admin</option>
+          <option value="manager">Manager</option>
+          <option value="clerk">Reservation Clerk</option>
+          <option value="travel">Travel Company</option>
+        </select>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="••••••••" required />
+        <div class="form-row between">
+          <div class="remember">
+            <input type="checkbox" id="remember" />
+            <label for="remember"> Remember for 30 days</label>
+          </div>
+          <a href="#" class="forgot">forgot password</a>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="../js/adminLogin.js"></script>
+
+</body>
+</html> 
